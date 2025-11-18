@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kean FC - Modulo Provini Ufficiali</title>
+    <link rel="icon" href="logokean.jpg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Oswald:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+
+    <header id="main-header">
+        <img src="logokean.jpg" alt="Kean FC Logo" class="logo-img">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="squadra.html">Squadra</a></li>
+                <li><a href="risultati.html">Risultati</a></li>
+                <li><a href="stagione.html">Storico</a></li>
+                <li><a href="club.html">Club</a></li>
+                <li><a href="provini.html" class="active">Provini</a></li>
+            </ul>
+        </nav>
+        <a href="contatti.html" class="cta-button">CONTATTI</a>
+    </header>
+
+    <section class="section-content" style="padding-top: 120px; min-height: 90vh;">
+        <div class="container">
+            
+            <h2 style="color: var(--oro-freddo);">Candidati al Provino</h2>
+            <div class="section-divider-line"></div>
+            <p class="section-subtitle">
+                Compila il modulo ufficiale per inviare la tua richiesta di provino al Kean FC.
+            </p>
+
+            <div class="card-grid" style="margin-bottom: 60px;">
+                <div class="generic-card stat-card-focus" style="border: 3px solid var(--oro-freddo);">
+                    <h4>Prossimo Periodo di Recruiting</h4>
+                    <p style="font-size: 2.5em; color: var(--viola-principale); text-shadow: none;"> Giugno 2026</p>
+                    <p style="font-size: 1.1em; color: var(--bianco-testo);">Le iscrizioni sono aperte ora!</p>
+                </div>
+                <div class="generic-card stat-card-focus" style="border: 3px solid var(--viola-principale);">
+                    <h4>Contatto Ufficiale</h4>
+                    <p style="font-size: 2.3em; color: var(--viola-principale); text-shadow: none;">keanfc.provini@gmail.com</p>
+                    <p style="font-size: 1em; color: var(--bianco-testo);">Sarai ricontattato in caso di interesse.</p>
+                </div>
+            </div>
+
+            <h3 style="font-family: var(--font-titoli); color: var(--bianco-testo); text-align: center; margin-bottom: 30px; font-size: 2.5em; text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);">Modulo di Iscrizione</h3>
+
+            <div class="contact-form-container" style="max-width: 700px; margin: 0 auto; background-color: var(--nero-accento); padding: 40px; border-radius: 10px; border: 1px solid var(--viola-principale);">
+                
+                <form id="provinoForm" action="https://formspree.io/f/xrbowdzr" method="POST">
+                    
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="Nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cognome">Cognome:</label>
+                        <input type="text" id="cognome" name="Cognome" required>
+                    </div>
+
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label for="eta">Età:</label>
+                            <input type="number" id="eta" name="Eta" required max="18">
+                        </div>
+                        <div class="form-group">
+                            <label for="piede">Piede Preferito:</label>
+                            <select id="piede" name="Piede" required>
+                                <option value="" disabled selected>Seleziona</option>
+                                <option value="Destro">Destro</option>
+                                <option value="Sinistro">Sinistro</option>
+                                <option value="Ambidestro">Ambidestro</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ruolo">Ruolo Principale:</label>
+                        <select id="ruolo" name="Ruolo" required>
+                            <option value="" disabled selected>Seleziona il tuo ruolo</option>
+                            <option value="Portiere">Portiere (PT)</option>
+                            <option value="Difensore_Centrale">Difensore Centrale (DC)</option>
+                            <option value="Terzino_Destro">Terzino Destro (TD)</option>
+                            <option value="Terzino_Sinistro">Terzino Sinistro (TS)</option>
+                            <option value="Centrocampista_Centrale">Centrocampista Centrale (CC)</option>
+                            <option value="Trequartista"> Trequartista (COC) </option>
+                            <option value="Ala_Destra">Ala Destra (AD)</option>
+                            <option value="Ala_Sinistra">Ala Sinistra (AS)</option>
+                            <option value="Attaccante">Attaccante (ATT)</option>
+                        </select>
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <label for="messaggio"> Il tuo Instagram :</label>
+                        <textarea id="messaggio" name="instagram" rows="4" placeholder="kean_fc_"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="messaggio">Note Aggiuntive (Caratteristiche, Storico):</label>
+                        <textarea id="messaggio" name="Note_Aggiuntive" rows="4" placeholder="Parlaci delle tue qualità tecniche e tattiche..."></textarea>
+                    </div>
+
+                    <button type="submit" class="cta-button" style="margin-top: 20px; width: 100%; background-color: var(--oro-freddo); color: var(--nero-dominante) !important;">
+                        INVIA LA CANDIDATURA
+                    </button>
+                    
+                    <p style="font-size: 0.9em; color: #999; margin-top: 15px;">Riceverai una conferma immediata e saremo notificati via email. Non è richiesta alcuna azione aggiuntiva.</p>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <p style="color: var(--bianco-testo);">© 2025 Kean FC | Eleganza Aggressiva.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/kean_fc_/" style="color: var(--oro-freddo) !important;" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@kean.fc?_t=ZN-90ys26RyFPy&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

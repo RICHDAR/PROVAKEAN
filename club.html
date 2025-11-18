@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kean FC - Chi Siamo</title>
+    <link rel="icon" href="logokean.jpg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Oswald:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header id="main-header">
+        <img src="logokean.jpg" alt="Kean FC Logo" class="logo-img">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="squadra.html">Squadra</a></li>
+                <li><a href="risultati.html">Risultati</a></li>
+                <li><a href="stagione.html">Storico</a></li>
+                <li><a href="club.html" class="active">Club</a></li>
+                <li><a href="provini.html">Provini</a></li>
+            </ul>
+        </nav>
+        <a href="contatti.html" class="cta-button">CONTATTI</a>
+    </header>
+
+    <section class="section-content" style="padding-top: 120px;">
+        <div class="container">
+            
+            <h2>La Nostra Identità</h2>
+            <div class="section-divider-line"></div>
+            <p class="section-subtitle">
+                Dalla fondazione ai valori che guidano la nostra squadra dentro e fuori dal campo.
+            </p>
+
+            <div class="club-story-container">
+                <div class="story-text">
+                    <h3>Nascita e Visione</h3>
+                    <p>
+                        La Kean Football Club nasce nel 2025 dalla pura passione di un gruppo coeso di amici. La nostra missione è stata fin da subito quella di creare un'identità forte nel calcio locale, unendo un approccio tattico rigoroso a uno stile di gioco brillante. Questo connubio è racchiuso nel nostro motto: Eleganza Aggressiva.
+                    </p>
+                    <p>
+                        Nonostante la giovane età, la dedizione ha dato i suoi frutti: nella nostra prima stagione completa abbiamo conquistato la prestigiosa <b>Triggiano Cup 2025 </b>, un successo che ci spinge a puntare sempre più in alto, uniti e determinati.
+                    </p>
+                </div>
+                <div class="story-image">
+                    <img src="logokean.jpg" alt="Kean FC Logo in stile club" class="club-logo-large">
+                </div>
+            </div>
+
+            <h2 style="margin-top: 80px;">Valori Fondamentali</h2>
+            <div class="section-divider-line"></div>
+            
+            <div class="values-grid card-grid">
+                <div class="generic-card value-card" style="border-left-color: var(--oro-freddo);">
+                    <i class="fas fa-handshake" style="font-size: 3em; color: var(--oro-freddo); margin-bottom: 15px;"></i>
+                    <h4>Unità e Lealtà</h4>
+                    <p>Siamo una famiglia dentro e fuori dal campo. La fiducia reciproca e il rispetto sono la base del nostro successo.</p>
+                </div>
+                <div class="generic-card value-card">
+                    <i class="fas fa-bullseye" style="font-size: 3em; color: var(--viola-principale); margin-bottom: 15px;"></i>
+                    <h4>Mentalità Vincente</h4>
+                    <p>Non ci accontentiamo mai. Ogni allenamento e ogni partita sono un passo verso il miglioramento e la prossima vittoria.</p>
+                </div>
+                <div class="generic-card value-card" style="border-left-color: var(--bianco-testo);">
+                    <i class="fas fa-heart" style="font-size: 3em; color: var(--bianco-testo); margin-bottom: 15px;"></i>
+                    <h4>Passione Assoluta</h4>
+                    <p>L'amore per il gioco è il motore del Kean FC. Giocare con il cuore, sempre e comunque.</p>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 80px;">Staff Dirigenziale</h2>
+            <div class="section-divider-line"></div>
+            <p class="section-subtitle">
+                Il leader che guida la squadra e l'organizzazione del Kean FC.
+            </p>
+
+            <div class="staff-card-grid player-card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 450px; margin: 0 auto 50px auto;">
+                
+                <div class="player-card staff-card"> 
+                    <div class="player-info">
+                        <div class="player-number" style="font-size: 1.8em; margin-bottom: 5px; color: var(--viola-principale);">PRESIDENTE</div>
+                        <h4 class="player-name" style="font-size: 2.2em; color: var(--oro-freddo);">ANDREA DE GIROLAMO</h4>
+                        <p class="player-role" style="color: var(--viola-principale);">Guida Tecnica e Organizzativa</p>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <p style="color: var(--bianco-testo);">© 2025 Kean FC | Eleganza Aggressiva.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/kean_fc_/" style="color: var(--oro-freddo) !important;" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@kean.fc?_t=ZN-90ys26RyFPy&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+                
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('main-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 80) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
