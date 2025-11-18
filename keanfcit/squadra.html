@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kean FC - Rosa Ufficiale</title>
+    <link rel="icon" href="logokean.jpg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Oswald:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header id="main-header">
+        <img src="logokean.jpg" alt="Kean FC Logo" class="logo-img">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="squadra.html" class="active">Squadra</a></li>
+                <li><a href="risultati.html">Risultati</a></li>
+                <li><a href="stagione.html">Storico</a></li>
+                <li><a href="club.html">Club</a></li>
+                <li><a href="provini.html">Provini</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="team-section">
+        <h1 class="section-title">ROSA UFFICIALE</h1>
+
+        <!-- PORTIERI -->
+        <h2 class="role-title">PORTIERI</h2>
+        <div class="players-container" id="portieri-dinamici"></div>
+
+        <!-- DIFENSORI -->
+        <h2 class="role-title">DIFENSORI</h2>
+        <div class="players-container" id="difensori-dinamici"></div>
+
+        <!-- CENTROCAMPISTI -->
+        <h2 class="role-title">CENTROCAMPISTI</h2>
+        <div class="players-container" id="centrocampisti-dinamici"></div>
+
+        <!-- ATTACCANTI -->
+        <h2 class="role-title">ATTACCANTI</h2>
+        <div class="players-container" id="attaccanti-dinamici"></div>
+
+        <!-- STAFF TECNICO -->
+        <h2 class="role-title">STAFF TECNICO</h2>
+        <div class="players-container" id="staff-dinamico"></div>
+
+    </section>
+
+    <footer id="main-footer">
+        <p>Kean FC © 2025 - Tutti i diritti riservati</p>
+    </footer>
+
+    <!-- LOADER -->
+    <script src="js/loader_squadra.js"></script>
+
+</body>
+</html>

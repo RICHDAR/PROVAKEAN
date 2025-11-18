@@ -1,0 +1,192 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+
+  # ==========================
+  # HOME PAGE
+  # ==========================
+  - name: "home"
+    label: "Home Page"
+    file: "data/home.json"
+    fields:
+      - {label: "Titolo Principale", name: "title", widget: "string"}
+      - {label: "Sottotitolo", name: "subtitle", widget: "string"}
+      - {label: "Testo Intro", name: "intro_text", widget: "text"}
+      - {label: "Titolo Ultimo Trionfo", name: "last_title", widget: "string"}
+      - {label: "Data Finale", name: "final_date", widget: "string"}
+      - {label: "Risultato Finale", name: "final_result", widget: "string"}
+      - {label: "Nome Avversario Finale", name: "opponent", widget: "string"}
+
+  # ==========================
+  # SQUADRA - PORTIERI
+  # ==========================
+  - name: "portieri"
+    label: "Portieri"
+    folder: "data/squadra/portieri"
+    create: true
+    format: "json"
+    extension: "json"
+    fields:
+      - {label: "Nome", name: "nome", widget: "string"}
+      - {label: "Numero", name: "numero", widget: "number"}
+      - {label: "Foto", name: "foto", widget: "image"}
+      - {label: "Descrizione", name: "descrizione", widget: "text"}
+
+  # ==========================
+  # SQUADRA - DIFENSORI
+  # ==========================
+  - name: "difensori"
+    label: "Difensori"
+    folder: "data/squadra/difensori"
+    create: true
+    format: "json"
+    extension: "json"
+    fields:
+      - {label: "Nome", name: "nome", widget: "string"}
+      - {label: "Numero", name: "numero", widget: "number"}
+      - {label: "Foto", name: "foto", widget: "image"}
+      - {label: "Descrizione", name: "descrizione", widget: "text"}
+
+  # ==========================
+  # SQUADRA - CENTROCAMPISTI
+  # ==========================
+  - name: "centrocampisti"
+    label: "Centrocampisti"
+    folder: "data/squadra/centrocampisti"
+    create: true
+    format: "json"
+    extension: "json"
+    fields:
+      - {label: "Nome", name: "nome", widget: "string"}
+      - {label: "Numero", name: "numero", widget: "number"}
+      - {label: "Foto", name: "foto", widget: "image"}
+      - {label: "Descrizione", name: "descrizione", widget: "text"}
+
+  # ==========================
+  # SQUADRA - ATTACCANTI
+  # ==========================
+  - name: "attaccanti"
+    label: "Attaccanti"
+    folder: "data/squadra/attaccanti"
+    create: true
+    format: "json"
+    extension: "json"
+    fields:
+      - {label: "Nome", name: "nome", widget: "string"}
+      - {label: "Numero", name: "numero", widget: "number"}
+      - {label: "Foto", name: "foto", widget: "image"}
+      - {label: "Descrizione", name: "descrizione", widget: "text"}
+
+  # ==========================
+  # STAFF TECNICO
+  # ==========================
+  - name: "staff"
+    label: "Staff Tecnico"
+    folder: "data/squadra/staff"
+    create: true
+    format: "json"
+    extension: "json"
+    fields:
+      - {label: "Nome", name: "nome", widget: "string"}
+      - {label: "Ruolo", name: "ruolo", widget: "string"}
+      - {label: "Foto", name: "foto", widget: "image"}
+      - {label: "Descrizione", name: "descrizione", widget: "text"}
+
+   # ==========================
+  # RISULTATI AVANZATI (DINAMICI)
+  # ==========================
+  - name: "risultati"
+    label: "Risultati Partite"
+    folder: "data/risultati"
+    create: true
+    format: "json"
+    extension: "json"
+    fields:
+      - {label: "Data partita", name: "data", widget: "datetime"}
+      - {label: "Fase / Round (es. Fase a Gironi, Semifinale, Finale)", name: "fase", widget: "string"}
+
+      - label: "Stile della partita"
+        name: "stile"
+        widget: "select"
+        options:
+          - {label: "Vittoria", value: "vittoria"}
+          - {label: "Vittoria Record", value: "record"}
+          - {label: "Pareggio", value: "pareggio"}
+          - {label: "Sconfitta", value: "sconfitta"}
+          - {label: "Vittoria a Tavolino", value: "tavolino"}
+          - {label: "Semifinale", value: "semifinale"}
+          - {label: "Finale Oro", value: "finale"}
+          - {label: "Fase a Gironi", value: "gironi"}
+          - {label: "Partita Speciale", value: "speciale"}
+
+      - {label: "Competizione", name: "competizione", widget: "string"}
+
+      - {label: "Logo KEAN FC", name: "logo_casa", widget: "image"}
+      - {label: "Logo Avversario", name: "logo_ospite", widget: "image"}
+
+      - {label: "Gol KEAN FC", name: "gol_casa", widget: "number"}
+      - {label: "Gol Avversario", name: "gol_ospite", widget: "number"}
+
+      - {label: "Marcatori KEAN", name: "marcatori", widget: "text"}
+
+      - {label: "Motivazione (solo per Tavolino)", name: "motivazione", widget: "text", required: false}
+
+  # ==========================
+  # STORICO / STAGIONE
+  # ==========================
+  - name: "storico"
+    label: "Storico Stagione"
+    file: "data/storico.json"
+    fields:
+      - {label: "Partite Giocate", name: "giocate", widget: "number"}
+      - {label: "Vittorie", name: "vittorie", widget: "number"}
+      - {label: "Pareggi", name: "pareggi", widget: "number"}
+      - {label: "Sconfitte", name: "sconfitte", widget: "number"}
+      - {label: "Gol Fatti", name: "gf", widget: "number"}
+      - {label: "Gol Subiti", name: "gs", widget: "number"}
+
+  # ==========================
+  # CLUB / CHI SIAMO
+  # ==========================
+  - name: "club"
+    label: "Pagina Club"
+    file: "data/club.json"
+    fields:
+      - {label: "Paragrafo 1", name: "p1", widget: "text"}
+      - {label: "Paragrafo 2", name: "p2", widget: "text"}
+      - {label: "Paragrafo 3", name: "p3", widget: "text"}
+      - {label: "Valori", name: "valori", widget: "list", fields: [
+          {label: "Titolo", name: "titolo", widget: "string"},
+          {label: "Descrizione", name: "descrizione", widget: "text"},
+          {label: "Icona (FontAwesome)", name: "icona", widget: "string"}
+        ]}
+
+  # ==========================
+  # NEWS
+  # ==========================
+  - name: "news"
+    label: "News & Comunicati"
+    folder: "data/news"
+    create: true
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "Titolo", name: "titolo", widget: "string"}
+      - {label: "Data", name: "data", widget: "datetime"}
+      - {label: "Immagine", name: "immagine", widget: "image"}
+      - {label: "Contenuto", name: "contenuto", widget: "text"}
+
+  # ==========================
+  # GALLERIA FOTO
+  # ==========================
+  - name: "galleria"
+    label: "Galleria Foto"
+    folder: "uploads/galleria"
+    create: true
+    fields:
+      - {label: "Foto", name: "file", widget: "image"}

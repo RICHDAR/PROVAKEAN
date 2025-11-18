@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kean FC - Risultati e Statistiche</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logokean.jpg" type="image/jpeg">
+</head>
+
+<body>
+
+<header id="main-header">
+    <img src="logokean.jpg" alt="Kean FC Logo" class="logo-img">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="squadra.html">Squadra</a></li>
+            <li><a href="risultati.html" class="active">Risultati</a></li>
+            <li><a href="stagione.html">Storico</a></li>
+            <li><a href="club.html">Club</a></li>
+            <li><a href="provini.html">Provini</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="results-section">
+
+    <h1 class="section-title">CRONACA DEI MATCH</h1>
+    <p class="section-subtitle">
+        Tutti i risultati e le statistiche dettagliate del nostro percorso vincente nella Triggiano Cup 2025.
+    </p>
+
+    <!-- STATISTICHE RIASSUNTO -->
+    <div class="stats-container">
+        <div class="stat-box"><h2>VITTORIE</h2><p id="stat-vittorie">0</p></div>
+        <div class="stat-box"><h2>PAREGGI</h2><p id="stat-pareggi">0</p></div>
+        <div class="stat-box"><h2>SCONFITTE</h2><p id="stat-sconfitte">0</p></div>
+        <div class="stat-box"><h2>GOL FATTI</h2><p id="stat-golfatti">0</p></div>
+    </div>
+
+    <h2 class="phase-title">TRIGGIANO CUP 2025 - PERCORSO IMBATTUTO</h2>
+
+    <!-- CONTENITORE RISULTATI DINAMICI -->
+    <div id="risultati-dinamici" class="match-grid"></div>
+
+</section>
+
+<footer id="main-footer">
+    <p>Kean FC © 2025 - Tutti i diritti riservati</p>
+</footer>
+
+<!-- LOADER RISULTATI -->
+<script src="js/loader_risultati.js"></script>
+
+</body>
+</html>
